@@ -45,7 +45,7 @@ func (this *Ypool) GetPoolMaxSize() uint32 {
 	return this.maxPoolSize.Load()
 }
 
-//submit a task in pool, equal to SubmitPriority(Low,task)
+//submit a task in pool, equal to SubmitPriority(Normal,task)
 func (this *Ypool) Submit(task func()) error {
 	//todo impl submit
 	return nil
@@ -57,7 +57,7 @@ func (this *Ypool) SubmitPriority(priority TaskPriority, task func()) error {
 	return nil
 }
 
-//submit a task to pool in queue with name:queueName, equal to SubmitQueuePriority(Low,queueName,task)
+//submit a task to pool in queue with name:queueName, equal to SubmitQueuePriority(Normal,queueName,task)
 func (this *Ypool) SubmitQueue(queueName interface{}, task func()) error {
 	//todo impl SubmitQueue
 	return nil
